@@ -4,12 +4,15 @@ class DockingStation
   attr_reader :bike
 
   def release_bike
+    #guard condition
+    raise 'No bikes available' unless @bike
+    #return bike if bike available
     @bike
-    #needs to give us a bike object
+  
   end
 
   def dock(bike)
-   #add bike to self
+   #add bike to docking station object
    @bike = bike
   end
 
