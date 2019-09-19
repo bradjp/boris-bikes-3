@@ -12,6 +12,8 @@ class DockingStation
   end
 
   def dock(bike)
+    #guard condition
+    fail "Docking station full" if @bike
    #add bike to docking station object
    @bike = bike
   end
